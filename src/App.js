@@ -1,9 +1,13 @@
-function App() {
+import Navbar from "./components/Navbar";
+// import Sidebar from "./components/Sidebar";
+
+const App = () => {
   return (
     <div>
-      hello hesab-yar
+      <Navbar />
+      {/* <Sidebar /> */}
     </div>
-  );
+  )
 }
 
 export default App;
