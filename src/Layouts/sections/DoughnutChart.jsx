@@ -35,16 +35,16 @@ const DoughnutChart = ({ mainTitle, totalCost, chartData, classes }) => {
     };
 
     return (
-        <div className="w-full md:w-1/2 lg:w-1/3 2xl:w-1/4">
-            <div className="border rounded-xl bg-white shadow-sm text-end p-4 space-y-5">
-                <div className="space-y-3">
+        <div className="h-full w-screen md:w-full lg:w-[48%] xl:w-[50%] relative px-4 md:px-0">
+            <div className="border rounded-xl bg-white shadow-sm text-end sm:p-4 lg:p-5 xl:p-3 space-y-5">
+                <div className="space-y-3 p-3 sm:p-0">
                     <h2>{mainTitle}</h2>
                     <div className={`font-semibold ${classes}`}>
                         {' '}
-                        مجموع : <span>{totalCost}</span> ریال
+                        مجموع : <span>{totalCost}</span>ریال
                     </div>
                 </div>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center w-full h-full">
                     <Doughnut data={data} options={options} />
                 </div>
             </div>
