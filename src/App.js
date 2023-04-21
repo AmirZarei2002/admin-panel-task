@@ -9,7 +9,7 @@ const App = () => {
             <BrowserRouter>
                 <Routes>
                     {/* Admin Management Dashboard */}
-                    <Route path="/admin" element={<ManagementDashboard />} />
+                    <Route path="/" element={<ManagementDashboard />} />
                 </Routes>
             </BrowserRouter>
         </MainLayout>
