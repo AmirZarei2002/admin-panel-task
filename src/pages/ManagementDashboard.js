@@ -1,9 +1,11 @@
-import Dashboard from '../components/dashboard-management/Dashboard';
+import OverallResults from '../components/dashboard-management/OverallResults';
+import Doughnuts from '../components/dashboard-management/Doughnuts';
 
 export default function ManagementDashboard() {
     return (
         <div>
-            <Dashboard />
+            <OverallResults />
+            <Doughnuts />
         </div>
     );
 }
