@@ -4,6 +4,11 @@
 
 body {
     margin: 0;
-    padding:0;
-    font-family: 'Shabnam', sans-serif;
+    padding: 0;
+    background-color: #f1f2f7;
+}
+
+@font-face {
+    font-family: Shabnam;
+    src: url(fonts/Shabnam.ttf) format('ttf');
 }
