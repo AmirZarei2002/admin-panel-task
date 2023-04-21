@@ -8,7 +8,7 @@ import { FiBell } from 'react-icons/fi';
 
 export default function Navbar() {
     return (
-        <nav className="bg-[#343d45] flex justify-between h-[54px] items-center">
+        <nav className="bg-[#343d45] flex justify-between h-[60px] items-center">
             <div className="bg-[#304967] h-full hidden place-items-center w-[50px] sm:flex order-last justify-center ml-5">
                 <img src={hesabyarLogo} alt="hesab-yar-logo" className="pl-1" />
             </div>
@@ -19,7 +19,7 @@ export default function Navbar() {
                 <img
                     src={adminIcon}
                     alt="admin-logo"
-                    className="rounded-full w-[40px] h-[40px]"
+                    className="rounded-full w-[40px] h-[40px] mb-3"
                 />
                 <i className="text-xl text-white hover:cursor-pointer">
                     <FiBell />
