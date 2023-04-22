@@ -35,7 +35,7 @@ const DoughnutChart = ({ mainTitle, totalCost, chartData, classes }) => {
     };
 
     return (
-        <div className="h-full w-screen md:w-full lg:w-[48%] xl:w-[50%] relative px-4 md:px-0">
+        <div className="h-full w-full relative px-4 md:px-0">
             <div className="border rounded-xl bg-white shadow-sm text-end sm:p-4 lg:p-5 xl:p-3 space-y-5">
                 <div className="space-y-3 p-3 sm:p-0">
                     <h2>{mainTitle}</h2>
