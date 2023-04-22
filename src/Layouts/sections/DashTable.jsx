@@ -8,7 +8,7 @@ export default function DashTable({ data, mainTitle }) {
                 <RxDotsVertical className="cursor-pointer text-xl" />
             </div>
             <div className="border-b-2 mx-3 mb-1" />
-            <div className="overflow-x-auto overflow-y-scroll max-h-[calc(100vh-6rem)]">
+            <div className="overflow-x-auto 2xl:overflow-x-hidden overflow-y-scroll max-h-[calc(100vh-6rem)]">
                 <table className="table-auto w-full text-end">
                     <thead>
                         <tr>
