@@ -24,12 +24,12 @@ export default function StoreGrowthChart() {
                         data: [0, 0, 2, 3, 2, 0, 0],
                         backgroundColor: [
                             '#2f68e0',
-                            '#53d028',
+                            '#40f485',
                             '#2867d0',
                             '#2867d0',
                             '#2867d0',
-                            '#dc3545',
-                            '#dc3545',
+                            '#f46363',
+                            '#f46363',
                         ],
                         borderColor: '#ffffff',
                         borderWidth: 1,
@@ -41,13 +41,13 @@ export default function StoreGrowthChart() {
                         label: 'درآمد های جانبی',
                         data: [0, 1, 2, 0, 0, 0, 0],
                         backgroundColor: [
-                            '#3aa814',
-                            '#53d028',
-                            '#53d028',
-                            '#3aa814',
-                            '#53d028',
-                            '#dc3545',
-                            '#dc3545',
+                            '#71b4fe',
+                            '#40f485',
+                            '#40f485',
+                            '#71b4fe',
+                            '#40f485',
+                            '#f46363',
+                            '#f46363',
                         ],
                         borderColor: '#ffffff',
                         borderWidth: 1,
@@ -59,13 +59,13 @@ export default function StoreGrowthChart() {
                         label: 'فروش محصولات',
                         data: [0, 0, 3, 3, 2, 0, 0],
                         backgroundColor: [
-                            '#dc3545',
-                            '#53d028',
-                            '#df4141',
-                            '#dc3545',
-                            '#dc3545',
-                            '#dc3545',
-                            '#dc3545',
+                            '#f46363',
+                            '#40f485',
+                            '#f46363',
+                            '#f46363',
+                            '#f46363',
+                            '#f46363',
+                            '#f46363',
                         ],
                         borderColor: '#ffffff',
                         borderWidth: 1,
@@ -76,6 +76,20 @@ export default function StoreGrowthChart() {
                 ],
             },
             options: {
+                plugins: {
+                    tooltip: {
+                        position: 'nearest',
+                        backgroundColor: '#cdc6c6',
+                        titleColor: 'black',
+                        titleFont: {
+                            size: 15,
+                        },
+                        bodyColor: 'gray',
+                        bodyFont: {
+                            size: 10,
+                        },
+                    },
+                },
                 legend: {
                     display: true,
                     position: 'bottom',
@@ -83,17 +97,21 @@ export default function StoreGrowthChart() {
                 },
             },
         });
+
         return () => {
             myChart.destroy();
         };
     }, []);
 
     return (
-        <div className="text-end border bg-white rounded-xl p-3 w-[110%] sm:w-[50%] sm:h-[20%] md:w-[86%] lg:w-[49%] xl:w-[52%] 2xl:w-[49.8%] lg:h-[50%]">
+        <div className="text-end border bg-white rounded-xl p-3 w-full">
             <h2 className="font-semibold text-black/60">
                 نمودار رشد فروشگاه در شش ماه اخیر
             </h2>
-            <canvas ref={chartRef} />
+            <canvas
+                ref={chartRef}
+                style={{ height: '20rem', maxHeight: '17rem' }}
+            ></canvas>
         </div>
     );
 }
