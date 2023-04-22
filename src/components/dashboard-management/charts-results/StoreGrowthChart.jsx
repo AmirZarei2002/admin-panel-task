@@ -110,7 +110,7 @@ export default function StoreGrowthChart() {
             </h2>
             <canvas
                 ref={chartRef}
-                style={{ height: '20rem', maxHeight: '17rem' }}
+                style={{ height: '20rem', maxHeight: '20rem' }}
             ></canvas>
         </div>
     );
