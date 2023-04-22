@@ -1,6 +1,5 @@
 import Navbar from '../components/Navbar.jsx';
 import Breadcrumb from '../components/Breadcrumb ';
-// import Sidebar from "../components/Sidebar";
 
 export default function MainLayout({ children }) {
     return (
@@ -9,7 +8,6 @@ export default function MainLayout({ children }) {
             <div className="px-4 sm:px-10">
                 <Breadcrumb />
                 <main>{children}</main>
-                {/* <Sidebar /> */}
             </div>
         </div>
     );
