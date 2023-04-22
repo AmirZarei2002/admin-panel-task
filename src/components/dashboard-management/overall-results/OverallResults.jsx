@@ -1,5 +1,5 @@
-import Breadcrumb from '../Breadcrumb ';
-import DashCard from '../../Layouts/sections/DashCard';
+import Breadcrumb from '../../Breadcrumb ';
+import DashCard from '../../../Layouts/sections/DashCard';
 
 // icons
 import { IoHome } from 'react-icons/io5';
@@ -8,10 +8,10 @@ import { FiPackage } from 'react-icons/fi';
 import { BsCartPlusFill } from 'react-icons/bs';
 
 // images
-import chart1 from '../../assets/chart-1.png';
-import chart2 from '../../assets/chart-2.png';
-import chart3 from '../../assets/chart-3.png';
-import chart4 from '../../assets/chart-4.png';
+import chart1 from '../../../assets/chart-1.png';
+import chart2 from '../../../assets/chart-2.png';
+import chart3 from '../../../assets/chart-3.png';
+import chart4 from '../../../assets/chart-4.png';
 
 export default function OverallResults() {
     const paths = ['داشبورد', 'مدیریت', 'خانه'];

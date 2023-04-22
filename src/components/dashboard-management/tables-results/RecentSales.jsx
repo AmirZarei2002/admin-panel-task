@@ -1,4 +1,4 @@
-import DashTable from '../../Layouts/sections/DashTable';
+import DashTable from '../../../Layouts/sections/DashTable';
 
 export default function RecentSales() {
     const data = [

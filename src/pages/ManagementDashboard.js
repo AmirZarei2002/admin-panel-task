@@ -1,9 +1,9 @@
-import OverallResults from '../components/dashboard-management/OverallResults';
-import StoreGrowthChart from '../components/dashboard-management/StoreGrowthChart';
-import ReleasedProduct from '../components/dashboard-management/ReleasedProduct';
-import RecentSales from '../components/dashboard-management/RecentSales';
-import TotalExpense from '../components/dashboard-management/TotalExpense';
-import TotalIncome from '../components/dashboard-management/TotalIncome';
+import OverallResults from '../components/dashboard-management/overall-results/OverallResults';
+import StoreGrowthChart from '../components/dashboard-management/charts-results/StoreGrowthChart';
+import TotalExpense from '../components/dashboard-management/charts-results/TotalExpense';
+import TotalIncome from '../components/dashboard-management/charts-results/TotalIncome';
+import ReleasedProduct from '../components/dashboard-management/tables-results/ReleasedProduct';
+import RecentSales from '../components/dashboard-management/tables-results/RecentSales';
 
 export default function ManagementDashboard() {
     return (

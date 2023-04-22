@@ -1,4 +1,4 @@
-import DoughnutChart from '../../Layouts/sections/DoughnutChart';
+import DoughnutChart from '../../../Layouts/sections/DoughnutChart';
 
 export default function TotalExpense() {
     const data = {
