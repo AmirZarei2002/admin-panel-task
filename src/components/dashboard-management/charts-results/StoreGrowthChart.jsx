@@ -34,7 +34,7 @@ export default function StoreGrowthChart() {
                         borderColor: '#ffffff',
                         borderWidth: 1,
                         borderRadius: 30,
-                        barThickness: 40,
+                        barThickness: 20,
                         maxBarThickness: 30,
                     },
                     {
@@ -52,12 +52,12 @@ export default function StoreGrowthChart() {
                         borderColor: '#ffffff',
                         borderWidth: 1,
                         borderRadius: 30,
-                        barThickness: 40,
+                        barThickness: 20,
                         maxBarThickness: 30,
                     },
                     {
                         label: 'فروش محصولات',
-                        data: [0, 0, 3, 3, 2, 0, 0],
+                        data: [0, 0, 3, 1, 2, 0, 0],
                         backgroundColor: [
                             '#f46363',
                             '#40f485',
@@ -70,7 +70,7 @@ export default function StoreGrowthChart() {
                         borderColor: '#ffffff',
                         borderWidth: 1,
                         borderRadius: 30,
-                        barThickness: 40,
+                        barThickness: 20,
                         maxBarThickness: 30,
                     },
                 ],
