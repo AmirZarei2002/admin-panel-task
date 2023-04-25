@@ -8,7 +8,7 @@ export default function DashTable({ mainTitle, headerNames, tableData, rowStyles
           <RxDotsVertical className="cursor-pointer text-xl" />
         </div>
         <div className="border-b-2 mx-3 mb-1" />
-        <div className="overflow-x-auto 2xl:overflow-x-hidden max-h-[calc(100vh-6rem)]">
+        <div className="overflow-x-auto overflow-y-scrol 2xl:overflow-x-hidden max-h-[calc(100vh-6rem)]">
           <table className="table-auto w-full text-end">
             <thead>
               <tr>
@@ -23,7 +23,7 @@ export default function DashTable({ mainTitle, headerNames, tableData, rowStyles
               {tableData?.map((rowData, rowIndex) => (
                 <tr key={rowIndex} style={rowStyles[rowIndex]} className="border-t">
                   {rowData?.map((cellData, cellIndex) => (
-                    <td key={cellIndex}    className="px-4 py-2 text-gray-600 text-sm font-normal">
+                    <td key={cellIndex}    className="px-2 py-2 text-gray-600 text-sm font-normal">
                       {cellData}
                     </td>
                   ))}
