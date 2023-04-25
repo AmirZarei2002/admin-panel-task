@@ -10,7 +10,7 @@ export default function Breadcrumb({ paths, icon: IconComponent, title }) {
                         {index > 0 && (
                             <span className="text-md font-mono pt-1"> &lt; </span>
                         )}
-                        <Link to={'/' + path} className="text-md">
+                        <Link to={'/' + path} className="text-sm font-semibold">
                             {path}
                         </Link>
                     </React.Fragment>
@@ -20,13 +20,13 @@ export default function Breadcrumb({ paths, icon: IconComponent, title }) {
                 <div className="border-r-[1px] border-black/20 pr-2">
                     {IconComponent && (
                         <div className="flex items-center space-x-2">
-                            <span className="text-md font-mono pt-1"> &lt; </span>
-                            <IconComponent className="text-xl cursor-pointer" />
+                            <span className="text-sm font-mono pt-1"> &lt; </span>
+                            <IconComponent className="text-md cursor-pointer" />
                         </div>
                     )}
                 </div>
                 <div className="pl-2">
-                    {title && <h1 className="text-2xl font-bold">{title}</h1>}
+                    {title && <h1 className="text-xl font-bold">{title}</h1>}
                 </div>
             </div>
         </div>
