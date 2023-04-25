@@ -34,7 +34,7 @@ export default function StoreGrowthChart() {
                         borderColor: '#ffffff',
                         borderWidth: 1,
                         borderRadius: 30,
-                        barThickness: 20,
+                        barThickness: 18,
                         maxBarThickness: 30,
                     },
                     {
@@ -52,7 +52,7 @@ export default function StoreGrowthChart() {
                         borderColor: '#ffffff',
                         borderWidth: 1,
                         borderRadius: 30,
-                        barThickness: 20,
+                        barThickness: 18,
                         maxBarThickness: 30,
                     },
                     {
@@ -70,7 +70,7 @@ export default function StoreGrowthChart() {
                         borderColor: '#ffffff',
                         borderWidth: 1,
                         borderRadius: 30,
-                        barThickness: 20,
+                        barThickness: 18,
                         maxBarThickness: 30,
                     },
                 ],
@@ -110,7 +110,7 @@ export default function StoreGrowthChart() {
             </h2>
             <canvas
                 ref={chartRef}
-                style={{ height: '22rem', maxHeight: '22rem' }}
+                style={{ height: '25rem', maxHeight: '25rem' }}
             ></canvas>
         </div>
     );
