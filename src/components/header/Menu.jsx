@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import hesabyarLogo from '../assets/logo.png';
-import adminIcon from '../assets/admin-icon-8.png';
-import { BiMenuAltRight, BiPlus } from 'react-icons/bi';
-import { TfiLayoutGrid2, TfiFullscreen } from 'react-icons/tfi';
-import { FiBell, FiPackage, FiSettings } from 'react-icons/fi';
+
+import adminIcon from '../../assets/admin-icon-8.png';
+
+// icons
 import { ImHome } from 'react-icons/im';
+import { FiPackage, FiSettings } from 'react-icons/fi';
+import { BiMenuAltRight, BiPlus } from 'react-icons/bi';
+import { IoMdMenu } from 'react-icons/io';
+
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import {
     FaUserTie,
@@ -23,68 +26,47 @@ import {
 import { GiShoppingCart } from 'react-icons/gi';
 import { BiMoney } from 'react-icons/bi';
 
-export default function Navbar() {
+export default function Menu() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
-        <nav className="bg-[#343d45] flex justify-between h-[60px] items-center">
+        <div className="relative">
             <div
                 className={`fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 transition duration-300 ease-in-out z-40 ${
                     isMenuOpen ? '' : 'hidden'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
             ></div>
-
-            <div className="bg-[#304967] h-full hidden place-items-center w-[50px] sm:flex order-last justify-center ml-5">
-                <img src={hesabyarLogo} alt="hesab-yar-logo" className="pl-1" />
-            </div>
-            <div className="space-x-5 items-center pl-6 hidden sm:flex">
-                <i className="text-xl text-white hover:cursor-pointer">
-                    <TfiLayoutGrid2 />
-                </i>
-                <img
-                    src={adminIcon}
-                    alt="admin-logo"
-                    className="rounded-full w-[40px] h-[40px] mb-3"
-                />
-                <i className="text-xl text-white hover:cursor-pointer">
-                    <FiBell />
-                </i>
-                <i className="text-xl text-white hover:cursor-pointer">
-                    <TfiFullscreen className="text-md text-white" />
-                </i>
-            </div>
-            <div className="flex-grow"></div>
             {/* The menu icon inside the menu */}
-            <div className={`relative ${isMenuOpen ? 'hidden' : ''}`}>
+            <div className={`relative pr-3 ${isMenuOpen ? 'hidden' : ''}`}>
                 <i
-                    className="flex text-white text-4xl hover:cursor-pointer"
+                    className="flex text-black/70 lg:text-white text-2xl hover:cursor-pointer"
                     onClick={() => setIsMenuOpen(true)}
                 >
-                    <BiMenuAltRight />
+                    <IoMdMenu />
                 </i>
             </div>
-            {/* The menu */}
             <div
-                className={`fixed top-0 right-0 w-64 h-screen bg-[#f4f5f8] text-gray-800 transition duration-300 ease-in-out transform overflow-y-scroll xl:overflow-visible ${
+                className={`fixed top-0 right-0 w-52 sm:w-64 h-screen bg-[#f4f5f8] text-gray-800 transition duration-300 ease-in-out transform overflow-y-scroll xl:overflow-visible ${
                     isMenuOpen ? '' : 'translate-x-full'
                 } z-50`}
             >
-                <div className="p-[11px] bg-[#304967] mb-3 font-bold flex items-center border border-transparent">
+                <div className="p-[11px] bg-[#304967] pb-[1.20rem] mb-3 font-bold flex items-center border border-transparent">
                     {/* The menu icon to close the menu */}
                     <i
-                        className="text-white text-4xl hover:cursor-pointer"
+                        className="text-black/70 lg:text-white text-2xl pt-1 hover:cursor-pointer"
                         onClick={toggleMenu}
                     >
                         <HiArrowNarrowRight />
                     </i>
-                    <span className="text-white font-bold ml-auto">
+                    <span className="text-white font-bold ml-auto sm:block hidden">
                         پنل مدیریت حسابیار
                     </span>
                 </div>
                 <ul className="text-lg text-end flex flex-col items-end space-y-5 xl:space-y-0">
-                    <div className="flex space-x-2 px-4 mb-4">
+                    <div className="flex space-x-2 px-4 sm:mb-4">
                         <div className="flex flex-col">
                             <h4 className="text-sm font-semibold">
                                 مدیر برنامه
@@ -103,7 +85,9 @@ export default function Navbar() {
                         <li className="flex flex-row-reverse items-center py-2 px-2 hover:bg-gray-200 cursor-pointer  justify-between">
                             <div className="flex flex-row-reverse gap-2">
                                 <ImHome className="text-lg" />
-                                <a href="/" className='font-bold'>داشبورد مدیریت</a>
+                                <a href="/" className="font-bold">
+                                    داشبورد مدیریت
+                                </a>
                             </div>
                         </li>
                         <li className="flex flex-row-reverse items-center py-2 px-2 hover:bg-gray-200 cursor-pointer  justify-between">
@@ -207,6 +191,6 @@ export default function Navbar() {
                     </div>
                 </ul>
             </div>
-        </nav>
+        </div>
     );
 }
