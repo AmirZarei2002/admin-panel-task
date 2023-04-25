@@ -26,7 +26,7 @@ export default function Breadcrumb({ paths, icon: IconComponent, title }) {
                     )}
                 </div>
                 <div className="pl-2">
-                    {title && <h1 className="text-xl font-bold">{title}</h1>}
+                    {title && <h1 className="text-xl font-bold ">{title}</h1>}
                 </div>
             </div>
         </div>
