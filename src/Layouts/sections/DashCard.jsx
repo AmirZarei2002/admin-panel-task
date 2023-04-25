@@ -12,7 +12,7 @@ export default function DashCards({
             className={`border z-0 rounded-xl rounded-tr-none my-4 w-full relative px-4 py-2 text-white opacity-80 shadow-sm bg-gradient-to-br space-y-2 ${classes}`}
         >
           <div className={`absolute right-0 px-2 py-1 mt-[-20px] rounded-tr-sm rounded-l-md z-10 ${newsClasses}`}>
-            <h4>{newsHead}</h4>
+            <h4 className="text-xs md:text-sm lg:text-xs xl:text-sm">{newsHead}</h4>
           </div>
             <div className="flex flex-col items-center pt-5">
                 <div className="text-2xl font-bold">
