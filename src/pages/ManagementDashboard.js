@@ -23,10 +23,10 @@ export default function ManagementDashboard() {
                 </div>
             </div>
             <div className="md:flex">
-                <div className="w-full md:w-1/2 md:p-4 lg:p-3">
+                <div className="w-full md:w-1/2 md:p-3">
                     <ReleasedProduct />
                 </div>
-                <div className="w-full md:w-1/2 md:p-4 lg:p-3">
+                <div className="w-full md:w-1/2 md:p-3">
                     <RecentSales />
                 </div>
             </div>
