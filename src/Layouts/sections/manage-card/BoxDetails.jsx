@@ -1,23 +1,121 @@
-// icons
-import { BsFillBuildingsFill } from 'react-icons/bs';
+import { makeStyles } from '@material-ui/core/styles';
+import { Button, Typography, Box } from '@material-ui/core';
 
-export default function BoxDetails({ name, title, subtitle }) {
+const useStyles = makeStyles((theme) => ({
+    root: {
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        border: '1px solid transparent',
+        color: 'white',
+        position: 'relative',
+        [theme.breakpoints.up('sm')]: {
+            width: '100vw',
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: '50%',
+        },
+    },
+    topSection: {
+        backgroundColor: '#343a40',
+        width: '100%',
+        height: '8rem',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'relative',
+        zIndex: 10,
+        paddingBottom: '30px',
+    },
+    title: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        fontWeight: '600',
+        lineHeight: '1.2',
+        fontSize: '1.5rem',
+        color: 'white',
+    },
+    subtitle: {
+        fontSize: '0.75rem',
+        color: 'white',
+    },
+    icon: {
+        backgroundColor: 'blue',
+        color: 'white',
+        width: 'fit-content',
+        height: 'fit-content',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        top: '65%',
+        zIndex: 30,
+        borderRadius: '50%',
+        padding: '16px',
+        border: '1px solid',
+        boxShadow: theme.shadows[3],
+    },
+    bottomSection: {
+        backgroundColor: 'white',
+        width: '100%',
+        height: '8rem',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingTop: '30px',
+    },
+    button: {
+        backgroundColor: '#1976d2',
+        color: 'white',
+        padding: '10px 25px',
+        margin: 'auto',
+        boxShadow: theme.shadows[3],
+        '&:hover': {
+            backgroundColor: '#196ecd',
+        },
+    },
+    buttonText: {
+        fontSize: '0.875rem',
+    },
+}));
+
+export default function BoxDetails({
+    buttonTitle,
+    title,
+    icon: IconComponent,
+    subtitle,
+}) {
+    const classes = useStyles();
+
     return (
-        <div className="relative w-full h-full flex justify-items-center sm:w-screen lg:w-1/3 flex-col items-center border border-transparent justify-center text-white">
-            <div className="bg-[#343a40] w-full text-center flex justify-center h-[8rem] items-center z-10 pb-10">
-                <div className="items-center flex flex-col space-y-2 font-semibold">
-                    <h4>{title}</h4>
-                    <span className="text-xs">{subtitle}</span>
+        <Box className={classes.root}>
+            <Box className={classes.topSection}>
+                <div className={classes.icon}>
+                        <IconComponent className="text-5xl" />
                 </div>
-            </div>
-            <div className="w-fit h-fit text-white absolute z-30 bg-blue-800 rounded-full p-4 border shadow-md">
-                <BsFillBuildingsFill className="text-5xl" />
-            </div>
-            <div className="bg-white text-center flex justify-center w-full h-[8rem] items-center pt-10">
-                <button className="bg-sky-600 text-white px-4 hover:bg-sky-800 py-2 shadow-md w-fit h-fit z-20">
-                    <span className=" text-sm">{name}</span>
-                </button>
-            </div>
-        </div>
+                <div className={classes.title}>
+                    <Typography variant="h6" className={classes.title}>
+                        {title}
+                    </Typography>
+                    <Typography
+                        variant="subtitle2"
+                        className={classes.subtitle}
+                    >
+                        {subtitle}
+                    </Typography>
+                </div>
+            </Box>
+            <Box className={classes.bottomSection}>
+                <Button className={classes.button}>
+                    <Typography variant="body2" className={classes.buttonText}>
+                        {buttonTitle}
+                    </Typography>
+                </Button>
+            </Box>
+        </Box>
     );
 }
