@@ -8,14 +8,14 @@ export default function TotalExpense() {
         colors: ['#d55450', '#d15668'],
         hovercolors: ['#c34631', '#fb4e45'],
     };
-  return (
-    <div>
-       <DoughnutChart
+    return (
+        <div>
+            <DoughnutChart
                 mainTitle="نمودار کل هزینه ها"
                 totalCost="7,927,813,894"
                 classes="text-[#c0515c]"
                 chartData={data}
             />
-    </div>
-  )
+        </div>
+    );
 }
