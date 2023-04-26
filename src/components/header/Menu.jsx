@@ -115,7 +115,7 @@ export default function Menu() {
                                         <a href="">شخص جدید</a>
                                     </li>
                                     <li className="hover:bg-white/70 pr-8 text-sm h-[25px]">
-                                        <a href="">لیست اشخاص</a>
+                                        <a href="/user-list">لیست اشخاص</a>
                                     </li>
                                     <li className="hover:bg-white/70 pr-8 text-sm h-[25px]">
                                         <a href="">دسته بندی جدید</a>
