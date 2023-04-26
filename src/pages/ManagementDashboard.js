@@ -7,7 +7,7 @@ import RecentSales from '../components/dashboard-management/tables-results/Recen
 
 export default function ManagementDashboard() {
     return (
-        <div>
+        <div className='px-4'>
             <OverallResults />
             <div className="flex flex-col-reverse justify-center lg:justify-between items-center sm:items-start sm:flex-col md:flex-row px-4 md:px-0 gap-4">
                 <div className="flex flex-col items-center sm:flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-1 xl:space-x-3 w-full lg:w-1/2">
