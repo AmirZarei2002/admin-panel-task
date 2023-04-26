@@ -1,38 +1,100 @@
 import { RxDotsVertical } from 'react-icons/rx';
+import { makeStyles } from '@material-ui/core/styles';
+import {
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Paper,
+    Typography,
+} from '@material-ui/core';
 
-export default function DashTable({ mainTitle, headerNames, tableData, rowStyles }) {
+const useStyles = makeStyles({
+    root: {
+        position: 'relative',
+        borderRadius: 'xl',
+        backgroundColor: 'white',
+    },
+    header: {
+        display: 'flex',
+        flexDirection: 'row-reverse',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '3px',
+        textAlign: 'start',
+    },
+    table: {
+        minWidth: '100%',
+        textAlign: 'end',
+    },
+    tableHeader: {
+        fontWeight: 'bold',
+        color: 'gray',
+        fontSize: '0.875rem',
+        textTransform: 'uppercase',
+        padding: '4px 16px',
+    },
+    tableCell: {
+        color: 'gray.600',
+        fontSize: '0.75rem',
+        fontWeight: 'normal',
+        padding: '8px',
+    },
+});
+
+export default function DashTable({
+    mainTitle,
+    headerNames,
+    tableData,
+    rowStyles,
+}) {
+    const classes = useStyles();
+
     return (
-      <div className="relative rounded-xl bg-white">
-        <div className="p-3 md:text-end text-start flex flex-row-reverse justify-between">
-          <h2 className="font-semibold text-gray-500">{mainTitle}</h2>
-          <RxDotsVertical className="cursor-pointer text-xl" />
-        </div>
-        <div className="border-b-2 mx-3 mb-1" />
-        <div className="overflow-x-auto overflow-y-scroll 2xl:overflow-y-hidden 2xl:overflow-x-hidden max-h-[calc(120vh-6rem)]">
-          <table className="table-auto w-full text-end">
-            <thead>
-              <tr>
-                {headerNames?.map((headerName, index) => (
-                  <th key={index} className="px-4 py-2 text-sm truncate">
-                    {headerName}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {tableData?.map((rowData, rowIndex) => (
-                <tr key={rowIndex} style={rowStyles[rowIndex]} className="border-t">
-                  {rowData?.map((cellData, cellIndex) => (
-                    <td key={cellIndex} className="px-2 py-2 text-gray-600 text-xs sm:text-sm font-normal">
-                      {cellData}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
+        <TableContainer component={Paper} className={classes.root}>
+            <div className={classes.header}>
+                <Typography variant="subtitle1" className={classes.mainTitle}>
+                    {mainTitle}
+                </Typography>
+                <RxDotsVertical className="cursor-pointer text-xl" />
+            </div>
+            <hr className="border-b-2 mx-3 mb-1" />
+            <div className="overflow-x-auto overflow-y-scroll 2xl:overflow-y-hidden 2xl:overflow-x-hidden max-h-[calc(120vh-6rem)]">
+                <Table className={classes.table}>
+                    <TableHead>
+                        <TableRow>
+                            {headerNames?.map((headerName, index) => (
+                                <TableCell
+                                    key={index}
+                                    className={classes.tableHeader}
+                                >
+                                    {headerName}
+                                </TableCell>
+                            ))}
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {tableData?.map((rowData, rowIndex) => (
+                            <TableRow
+                                key={rowIndex}
+                                style={rowStyles[rowIndex]}
+                                className="border-t"
+                            >
+                                {rowData?.map((cellData, cellIndex) => (
+                                    <TableCell
+                                        key={cellIndex}
+                                        className={classes.tableCell}
+                                    >
+                                        {cellData}
+                                    </TableCell>
+                                ))}
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </div>
+        </TableContainer>
     );
-  }
-  
+}
