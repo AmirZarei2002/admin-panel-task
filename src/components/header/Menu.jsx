@@ -141,7 +141,7 @@ export default function Menu() {
                                 <ul className="absolute py-4 bg-gray-300 top-full z-50 right-0 border border-gray-400 w-full space-y-5">
                                     {/* Add your dropdown options here */}
                                     <li className="hover:bg-white/70 pr-8 text-sm h-[25px]">
-                                        <a href="">شرکت جدید</a>
+                                        <a href="/create/company">شرکت جدید</a>
                                     </li>
                                     <li className="hover:bg-white/70 pr-8 text-sm h-[25px]">
                                         <a href="">لیست شرکت</a>
