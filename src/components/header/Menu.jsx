@@ -100,7 +100,7 @@ export default function Menu() {
                         <li className="flex flex-row-reverse items-center py-2 px-2 hover:bg-gray-200 cursor-pointer  justify-between">
                             <div className="flex flex-row-reverse gap-2">
                                 <BsFillBuildingFill className="text-lg text-[#2f79bd]" />
-                                <a href="/">مدیریت شرکت ها</a>
+                                <a href="/create/company">مدیریت شرکت ها</a>
                             </div>
                             <BiPlus className="text-lg" />
                         </li>
