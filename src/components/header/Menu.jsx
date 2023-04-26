@@ -5,7 +5,7 @@ import adminIcon from '../../assets/admin-icon-8.png';
 // icons
 import { ImHome } from 'react-icons/im';
 import { FiPackage, FiSettings } from 'react-icons/fi';
-import { BiMenuAltRight, BiPlus } from 'react-icons/bi';
+import { BiPlus } from 'react-icons/bi';
 import { IoMdMenu } from 'react-icons/io';
 
 import { HiArrowNarrowRight } from 'react-icons/hi';
@@ -93,7 +93,7 @@ export default function Menu() {
                         <li className="flex flex-row-reverse items-center py-2 px-2 hover:bg-gray-200 cursor-pointer  justify-between">
                             <div className="flex flex-row-reverse gap-2">
                                 <FaUserTie className="text-lg text-[#2f79bd]" />
-                                <a href="/">مدیریت اشخاص</a>
+                                <a href="/create/person">مدیریت اشخاص</a>
                             </div>
                             <BiPlus className="text-lg" />
                         </li>
